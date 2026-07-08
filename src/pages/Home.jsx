@@ -396,7 +396,7 @@ export default function Portfolio() {
           <div className="flex flex-col gap-5">
             {[
             { i1: images.setupLaptop, title: "Máy tính / Laptop", sub: "Thiết bị học tập chính", inset: true },
-            { i1: images.setupCreative, title: "VS Code / Figma", sub: "Công cụ thiết kế & lập trình", inset: false },
+            { i1: images.setupCreative, title: "Google Scholar", sub: "Công cụ nghiên cứu & học thuật", inset: false },
             { i1: images.setupWorkspace, title: "Google Workspace", sub: "Làm việc và cộng tác nhóm", inset: true }].
             map((item, i) =>
             <motion.div
