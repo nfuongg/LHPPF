@@ -79,154 +79,206 @@ export const assignments = [
   {
     id: 3,
     baiTap: "Bài 3",
-    title: "Tổng quan về trí tuệ nhân tạo",
+    title: "Thực nghiệm và phân tích hiệu quả Prompt trong học tập",
     icon: "🤖",
-    tags: ["Trí tuệ nhân tạo", "AI", "Prompt Engineering"],
-    pdfLink: "https://drive.google.com/file/d/13nTl0Rnl9eFCaJiWy4l1UDX815eL2bw_/view?usp=drive_link",
-    goal: "Có cái nhìn tổng quát về trí tuệ nhân tạo (AI), các ứng dụng thực tiễn và tác động của AI đến cuộc sống hiện đại.",
-    summary: "Nghiên cứu Prompt Engineering — kỹ năng thiết kế câu lệnh để khai thác tối đa hiệu năng của các Mô hình Ngôn ngữ Lớn (LLMs) trong học tập và nghiên cứu chuyên ngành.",
+    tags: ["Prompt Engineering", "Tiếng Trung", "HSK4"],
+    pdfLink:
+      "https://drive.google.com/file/d/1yA4ZCGxs3fiJcfBM_KVpxctoKeSM0Oz5/view?usp=drive_link",
+    goal: "Nắm vững kỹ năng thiết kế và tối ưu prompt (Prompt Engineering) để khai thác hiệu quả AI trong việc học ngoại ngữ và nghiên cứu chuyên ngành.",
+    summary:
+      'Thực nghiệm 3 cấp độ prompt (cơ bản – cải tiến – nâng cao) trên 3 tác vụ: tóm tắt lý thuyết Thuyết hành vi ngôn ngữ (Speech Act Theory), giải thích cấu trúc ngữ pháp tiếng Trung (câu chữ "把"), và tạo bộ câu hỏi ôn tập HSK4. Phân tích vai trò của Contextualization, Chain-of-Thought và Few-shot Prompting; tổng hợp thành công thức viết prompt hiệu quả C-O-N-T-E-X-T.',
     sections: [
       {
         title: "Mục tiêu bài tập",
-        content: "Khảo sát, thử nghiệm và phát triển kỹ năng Prompt Engineering nhằm khai thác tối đa hiệu năng lập luận logic, xử lý tri thức chuyên môn của các LLMs (đặc biệt là ChatGPT). Xây dựng bộ gợi ý chuẩn hóa cho việc tóm tắt tài liệu, giải thích khái niệm và tạo bài ôn tập."
-      },
-      {
-        title: "3 Cấp độ Prompt đã thử nghiệm",
-        steps: [
-          { step: "🔵", title: "Prompt Cơ bản", desc: "Câu lệnh ngắn gọn, thiếu ngữ cảnh → Đầu ra chung chung, ít chi tiết, chưa đáp ứng nhu cầu học thuật." },
-          { step: "🟡", title: "Prompt Cải tiến", desc: "Bổ sung yêu cầu cụ thể về định dạng, độ dài, phân đoạn → Đầu ra rõ ràng, có cấu trúc, phù hợp hơn." },
-          { step: "🟢", title: "Prompt Nâng cao", desc: "Áp dụng kỹ thuật phân vai (Role-play) + Chain-of-Thought → Đầu ra chuyên sâu, có chiều sâu học thuật, đạt chuẩn nghiên cứu." },
-        ]
+        content:
+          "Khảo sát, thử nghiệm và phân tích hiệu quả của Prompt Engineering trên 3 tác vụ học tập tiếng Trung, từ đó rút ra nguyên tắc xây dựng prompt tối ưu giúp khai thác tối đa khả năng lập luận và xử lý tri thức chuyên môn của AI (ChatGPT)."
       },
       {
         title: "Các tác vụ thực nghiệm",
         highlights: [
-          { emoji: "📄", text: "Tóm tắt tài liệu học thuật: So sánh 3 cấp độ prompt trên bài đọc về Tụ điện trong mạch điện xoay chiều" },
-          { emoji: "💡", text: "Giải thích khái niệm phức tạp: Hiện tượng dòng điện sớm pha hơn điện áp 90° trong tụ điện" },
-          { emoji: "📝", text: "Tạo bộ câu hỏi ôn tập: Bài tập trắc nghiệm và tự luận về Mạch RLC nối tiếp và Hiện tượng cộng hưởng" },
+          { emoji: "📄", text: "Tóm tắt tài liệu học thuật: Thuyết hành vi ngôn ngữ (Speech Act Theory) — thách thức là giữ đúng thuật ngữ chuyên môn trong khi vẫn ngắn gọn, dễ hiểu." },
+          { emoji: "🔤", text: "Giải thích cấu trúc ngữ pháp phức tạp: Cách dùng câu chữ \"把\" trong tiếng Trung — thách thức là cân bằng giữa tính hàn lâm và tính ứng dụng." },
+          { emoji: "📝", text: "Tạo bộ câu hỏi ôn tập: Bài tập dịch, trắc nghiệm theo trình độ HSK4 — thách thức là tạo câu hỏi có tính phân hóa và sát với đề thi thực tế." },
+        ]
+      },
+      {
+        title: "3 Cấp độ Prompt đã thử nghiệm",
+        steps: [
+          { step: "🔵", title: "Prompt Cơ bản", desc: "Câu lệnh ngắn, chưa có ngữ cảnh (VD: \"Hãy tóm tắt nội dung này\", \"giải thích cách dùng câu chữ 把\") → đầu ra chung chung, định nghĩa sơ sài." },
+          { step: "🟡", title: "Prompt Cải tiến", desc: "Bổ sung yêu cầu cụ thể về nội dung, định dạng (VD: tập trung 5 loại hành vi ngôn ngữ, trình bày gạch đầu dòng, cho ví dụ kèm pinyin) → đầu ra có cấu trúc, trực quan hơn." },
+          { step: "🟢", title: "Prompt Nâng cao", desc: "Kết hợp phân vai (Role-play) + Chain-of-Thought + Few-shot (VD: \"Bạn là chuyên gia ngôn ngữ học...\", chia bước rõ ràng, dùng công thức mô tả cấu trúc) → đầu ra chuyên sâu, có phân tích lỗi sai, đạt chuẩn sư phạm." },
+        ]
+      },
+      {
+        title: "So sánh hiệu quả 3 cấp độ Prompt",
+        highlights: [
+          { emoji: "📚", text: "Độ bao phủ kiến thức: từ định nghĩa sơ sài (cơ bản) → có cấu trúc, ví dụ rõ ràng (cải tiến) → phân tích cả lỗi sai thường gặp (nâng cao)." },
+          { emoji: "🎯", text: "Sự tương thích trình độ: từ không xác định (cơ bản) → khá phù hợp (cải tiến) → hoàn toàn phù hợp (nâng cao)." },
+          { emoji: "🧑‍🏫", text: "Khả năng sư phạm: từ chỉ cung cấp thông tin (cơ bản) → còn hàn lâm (cải tiến) → có so sánh, sửa lỗi rõ ràng (nâng cao)." },
+          { emoji: "⚡", text: "Khả năng ứng dụng: từ phải hỏi lại nhiều lần (cơ bản) → dùng ngay được (cải tiến) → ứng dụng dễ dàng trong thực tế (nâng cao)." },
+        ]
+      },
+      {
+        title: "Công thức Prompt hiệu quả: C-O-N-T-E-X-T",
+        highlights: [
+          { emoji: "🅲", text: "Context: Cung cấp bối cảnh cụ thể (VD: \"Tôi là sinh viên ULIS, đang học HSK4...\")" },
+          { emoji: "🅾️", text: "Objective: Nêu rõ mục tiêu (tóm tắt để ôn thi, tạo bài tập để luyện tập...)" },
+          { emoji: "🅽", text: "No Ambiguity: Quy định rõ định dạng đầu ra (bảng biểu, danh sách, đoạn văn)" },
+          { emoji: "🆃", text: "Tone: Thiết lập giọng văn phù hợp (trang trọng, học thuật hay gần gũi)" },
+          { emoji: "🅴", text: "Examples: Đưa ra ít nhất 1-2 ví dụ mẫu khi yêu cầu phức tạp" },
+          { emoji: "🆇", text: "X-factor/Constraints: Thêm ràng buộc cụ thể (giới hạn từ vựng theo HSK, số chữ...)" },
         ]
       },
       {
         title: "Kết luận",
-        content: "Prompt Engineering là kỹ năng tư duy hệ thống, không phải chỉ gõ lệnh. Chất lượng đầu ra của AI phụ thuộc trực tiếp vào chất lượng câu hỏi mà người dùng đặt ra. Kỹ năng này sẽ ngày càng quan trọng trong môi trường học tập và làm việc hiện đại."
+        content:
+          "Chất lượng đầu ra của AI phụ thuộc trực tiếp vào chất lượng và độ chi tiết của prompt. Việc thiết lập bối cảnh (Contextualization), chia nhỏ tác vụ theo chuỗi tư duy (Chain-of-Thought) và đưa ví dụ mẫu (Few-shot) giúp AI tạo ra tài liệu học tập có tính hệ thống, sư phạm và ứng dụng cao. Prompt Engineering là kỹ năng tư duy hệ thống, không chỉ đơn thuần là gõ lệnh, và sẽ ngày càng quan trọng trong môi trường học tập, làm việc hiện đại."
       }
-    ]
+    ],
   },
   {
     id: 4,
     baiTap: "Bài 4",
-    title: "Giao tiếp và hợp tác trong môi trường số",
+    title: "Sử dụng công cụ hợp tác trực tuyến cho dự án nhóm",
     icon: "💬",
-    tags: ["Giao tiếp số", "Teamwork", "Cộng tác"],
-    pdfLink: "https://drive.google.com/file/d/1nUhAy4WBcY-QV_GbbSVsK1JRKNT2_8cf/view?usp=drive_link",
-    goal: "Phát triển kỹ năng giao tiếp chuyên nghiệp và hợp tác nhóm hiệu quả thông qua các công cụ kỹ thuật số.",
-    summary: "Thực hành sử dụng các nền tảng cộng tác như Google Workspace, Microsoft Teams, Trello trong dự án nhóm thực tế — với vai trò Điều phối viên kiêm Chuyên viên phân tích hệ thống.",
+    tags: ["Google Workspace", "Điều phối dự án", "Quản lý tài nguyên"],
+    pdfLink:
+      "https://drive.google.com/file/d/1e6Xi6z3ej-VnOg3yk-NbVHp5_PwwfLBY/view?usp=drive_link",
+    goal: "Phát triển năng lực điều phối và làm việc nhóm từ xa thông qua việc thiết lập, tối ưu hóa hệ sinh thái công cụ số.",
+    summary:
+      'Triển khai và liên kết 3 công cụ Google Meet – Google Docs – Google Drive thành quy trình khép kín cho dự án "Nghiên cứu ứng dụng phương pháp phân tích hành vi ngôn ngữ trong tác phẩm văn học Trung Quốc". Xây dựng hệ thống thư mục đa cấp, phân quyền truy cập (Editor/Commenter), xử lý 2 thách thức lớn: xung đột ghi đè dữ liệu khi chỉnh sửa đồng thời và gián đoạn kết nối trong họp trực tuyến.',
     sections: [
       {
         title: "Bối cảnh dự án",
-        content: "Nhóm dự án TechVision Group (5 thành viên) xây dựng Đặc tả yêu cầu hệ thống quản trị tri thức tích hợp AI trong vòng 1 tuần. Tôi đảm nhận vai trò Điều phối viên kiêm BA — chuyển hóa mục tiêu lớn thành các task cụ thể, viết Chương 2 (Yêu cầu chức năng), và phối hợp toàn nhóm theo mô hình Agile/Scrum."
+        content:
+          "Trong bối cảnh chuyển đổi số giáo dục mạnh mẽ tại ULIS, khả năng làm việc cộng tác từ xa đã trở thành năng lực cốt lõi của sinh viên. Trong quá trình thực hiện dự án \"Nghiên cứu ứng dụng phương pháp phân tích hành vi ngôn ngữ trong tác phẩm văn học Trung Quốc\", tôi đảm nhận vai trò điều phối, thiết lập và liên kết hệ sinh thái 3 công cụ chủ lực — Google Meet, Google Docs, Google Drive — thành một luồng công việc khép kín, đồng thời xây dựng bảng phân công nhiệm vụ chi tiết cho từng thành viên trong nhóm."
       },
       {
         title: "Hệ thống công cụ sử dụng",
         steps: [
-          { step: "📋", title: "Trello (Agile Board)", desc: "Quản lý tiến độ: Phân task, gán deadline, theo dõi trạng thái To-Do → In Progress → Done cho từng thành viên." },
-          { step: "📝", title: "Google Docs", desc: "Đồng soạn thảo trực tiếp: Viết 12 trang đặc tả kỹ thuật, sử dụng Suggesting mode và Comment để phối hợp nhóm." },
-          { step: "💾", title: "Google Drive", desc: "Lưu trữ khoa học theo cấu trúc cây thư mục, đặt tên file theo định dạng chuẩn hóa: [Mã_Mục]-[Tên]-[Phiên_Bản]-[Người_Cập_Nhật]." },
-          { step: "🎯", title: "Microsoft Teams", desc: "Giao tiếp nhóm: Daily Stand-up lúc 21h00, sử dụng Thread/Reply để gom cuộc trò chuyện theo chủ đề." },
+          { step: "01", title: "Google Meet", desc: "Giao tiếp và hội thoại đồng bộ: Dùng tính năng \"Ghi chú cuộc họp\" tự động tạo file Google Docs lưu biên bản; kích hoạt Phụ đề trực tiếp (Live Captions) khi đường truyền mạng gặp sự cố." },
+          { step: "02", title: "Google Docs", desc: "Soạn thảo văn bản đồng thời: Dùng thẻ @tên_thành_viên để giao việc, các thẻ trạng thái [Cần bổ sung]/[Đã phê duyệt]; chuyển sang chế độ Suggesting để tránh ghi đè nội dung khi nhiều người cùng sửa." },
+          { step: "03", title: "Google Drive", desc: "Lưu trữ, phân cấp tài nguyên và phân quyền bảo mật: Xây dựng hệ thống thư mục đa cấp; phân quyền Editor cho các thành viên dự án, Commenter/Viewer riêng cho giảng viên hướng dẫn." },
+        ]
+      },
+      {
+        title: "Kênh tương tác & thảo luận",
+        highlights: [
+          { emoji: "💬", text: "Bất đồng bộ qua Google Docs Comments: để lại bình luận chuyên sâu, tag thành viên phụ trách chương khác để góp ý và phản hồi triệt để." },
+          { emoji: "🎥", text: "Đồng bộ qua Google Meet Chat: chia sẻ liên kết tài liệu, tóm tắt ý kiến làm cơ sở biên bản họp, dùng tính năng giơ tay/thả cảm xúc để điều phối luồng thảo luận." },
         ]
       },
       {
         title: "Thách thức & Giải pháp",
         highlights: [
-          { emoji: "⚡", text: "Nhiễu loạn thông tin: Thiết lập quy tắc dùng Reply/Thread, chuyển kết luận họp thành Trello card có deadline" },
-          { emoji: "🐢", text: "Lệch tốc độ làm việc: Chủ động Quick Sync 15 phút mỗi tối, tag tên thành viên liên quan để tăng trách nhiệm" },
-          { emoji: "📉", text: "Xung đột lịch học: Xây dựng không gian làm việc số bất đồng bộ, mọi thành viên có thể đóng góp theo giờ riêng" },
+          { emoji: "⚠️", text: "Xung đột ghi đè dữ liệu (Google Docs): Nhiều thành viên cùng sửa đồng thời gây đảo lộn định dạng → Giải pháp \"Phân vùng và Đặt lịch làm việc\": chia tài liệu thành phân đoạn độc lập, chuyển sang chế độ Suggesting, mọi chỉnh sửa phải qua Nhóm trưởng duyệt." },
+          { emoji: "📶", text: "Gián đoạn kết nối mạng (Google Meet): Lỗi đường truyền khiến tín hiệu âm thanh gián đoạn → Giải pháp: kích hoạt Phụ đề trực tiếp (Live Captions) và mở song song file Biên bản cuộc họp trực tiếp để live-notetaking." },
         ]
       },
       {
         title: "Kết quả đạt được",
-        content: "Chu kỳ xử lý yêu cầu chỉnh sửa giảm từ 12 giờ xuống dưới 30 phút nhờ thông báo real-time. Tài liệu dự án hoàn thành đúng hạn với 0 lần mất dữ liệu nhờ auto-save và version history của Google Workspace."
+        content:
+          "Sử dụng thành thạo và liên kết tối ưu hệ sinh thái Google (Meet, Docs, Drive), đáp ứng đầy đủ 3 khía cạnh: quản lý tác vụ, soạn thảo cộng tác và lưu trữ thông tin. Duy trì kỷ luật cập nhật tiến độ hàng ngày, tổ chức tài nguyên khoa học với hệ thống thư mục logic 3 cấp, đặt tên file chính xác 100% và cấu hình phân quyền truy cập chặt chẽ. Bài học cốt lõi: công nghệ chỉ phát huy tối đa sức mạnh khi đi kèm kỷ luật tổ chức và sự đồng thuận về quy trình của tập thể."
       }
-    ]
+    ],
   },
   {
     id: 5,
     baiTap: "Bài 5",
-    title: "Sáng tạo nội dung số",
+    title: "Ứng dụng AI tạo sinh trong thiết kế cẩm nang số",
     icon: "✨",
-    tags: ["Nội dung số", "Thiết kế", "AI tạo sinh"],
-    pdfLink: "https://drive.google.com/file/d/1R2-Cb0TwXWlJgwPWnw0MDxrRyjMIj0ny/view?usp=drive_link",
-    goal: "Phát triển kỹ năng tạo ra các nội dung số chất lượng như văn bản, hình ảnh, video phục vụ mục đích học tập và truyền thông.",
-    summary: "Sản xuất bài viết chuyên sâu tích hợp Infographic về chủ đề 'Kỷ Nguyên AI và Tương lai Nghề nghiệp của Thế Hệ Trẻ' sử dụng Google Gemini, Claude AI, DALL-E 3, Midjourney và Canva AI.",
+    tags: ["Nội dung số", "Midjourney", "AI tạo sinh"],
+    pdfLink:
+      "https://drive.google.com/file/d/1Bqb7OnoEseRS-BwTvD2BnjiWmeCK5ti5/view?usp=drive_link",
+    goal: "Phát triển kỹ năng sáng tạo nội dung số đa phương tiện (văn bản, hình ảnh, thiết kế) bằng công cụ GenAI.",
+    summary:
+      'Thiết kế cẩm nang số 5 trang "Lối sống xanh cho người trẻ thành thị" (Infographic & E-book), phối hợp Google Gemini (viết nội dung), Midjourney v6 (tạo ảnh minh họa), Canva AI/Adobe Firefly (thiết kế, mở rộng bố cục). Phân tích điểm mạnh/hạn chế của AI trong sáng tạo và các vấn đề đạo đức: bản quyền dữ liệu, nguy cơ lười tư duy, tính xác thực (hallucination).',
     sections: [
       {
         title: "Dự án sáng tạo",
-        content: "Bài viết chuyên sâu tích hợp Infographic với chủ đề: 'Kỷ Nguyên Trí Tuệ Nhân Tạo: Đường Đua Kỹ Năng Số Và Tương Lai Nghề Nghiệp Của Thế Hệ Trẻ'. Mục tiêu: Cung cấp cái nhìn thực tế, định hướng hành động rõ ràng cho người đọc về cách tồn tại và phát triển trong kỷ nguyên AI."
+        content:
+          "Xây dựng một cẩm nang số trực quan (Infographic kết hợp E-book) dài 5 trang mang tên 'Lối sống xanh cho người trẻ thành thị', cung cấp giải pháp thực tế về lối sống bền vững cho thế hệ trẻ tại các đô thị lớn. Dự án phối hợp chặt chẽ giữa tư duy định hướng của con người và năng lực thực thi của 3 công cụ GenAI: Google Gemini (Văn bản), Midjourney (Hình ảnh), và Canva AI / Adobe Firefly (Thiết kế & Biên tập)."
       },
       {
         title: "Quy trình 3 giai đoạn",
         steps: [
-          { step: "01", title: "Lên ý tưởng & Viết nội dung (AI Văn bản)", desc: "Dùng Google Gemini xây dựng dàn ý cấu trúc. Dùng Claude AI viết nội dung chuyên sâu với văn phong mượt mà, lập luận sắc bén và chiều sâu cảm xúc." },
-          { step: "02", title: "Tạo hình ảnh minh họa (AI Hình ảnh)", desc: "DALL-E 3 cho độ chính xác chi tiết cao. Midjourney v6 cho chất lượng nghệ thuật điện ảnh vượt trội — được chọn làm ảnh chính." },
-          { step: "03", title: "Thiết kế layout (AI Thiết kế)", desc: "Canva AI (Magic Studio) tự động tạo khung lưới chuẩn, đề xuất bố cục icon và tỷ lệ chữ — tiết kiệm 70% thời gian căn chỉnh thủ công." },
+          { step: "01", title: "Sáng tạo nội dung văn bản (Google Gemini)", desc: "Đóng vai chuyên gia môi trường kiêm copywriter để xây dựng cấu trúc 5 trang (tiêu đề, 3 luận điểm, 1 thông điệp CTA). Sau khi nhận outline từ Gemini, viết lại toàn bộ nội dung theo ngôn ngữ Gen Z và bổ sung số liệu thực tế Việt Nam năm 2026." },
+          { step: "02", title: "Sáng tạo hình ảnh (Midjourney v6)", desc: "Tạo concept phòng ở của Gen Z Việt Nam hiện đại với cây xanh, ánh sáng tự nhiên, phong cách minh họa phẳng, tông màu pastel — cho ra 4 ảnh minh họa chất lượng cao, đúng xu hướng thẩm mỹ." },
+          { step: "03", title: "Thiết kế đồ họa & phối màu (Canva AI & Adobe Firefly)", desc: "Dùng tính năng Generative Expand của Adobe Firefly để mở rộng khung ảnh 16:9 của Midjourney thành khổ dọc 9:16 phù hợp định dạng e-book trên điện thoại, kết hợp Canva AI (Magic Studio) để dàn trang." },
         ]
       },
       {
-        title: "Nội dung sản phẩm: 3 Kỹ năng số cốt lõi",
+        title: "So sánh 3 công cụ AI",
         highlights: [
-          { emoji: "⌨️", text: "Kỹ nghệ Prompt (Prompt Engineering): Làm chủ tư duy ra lệnh, tối ưu hóa hiệu suất với LLMs" },
-          { emoji: "🧠", text: "Tư duy Phản biện (Critical Thinking): Màng lọc thẩm định dữ liệu, phát hiện bias và giữ vững giá trị nhân văn" },
-          { emoji: "🔄", text: "Thích ứng Linh hoạt (Adaptability): Tinh thần tự học liên tục, tái cấu trúc kiến thức theo tốc độ đổi mới" },
+          { emoji: "📝", text: "Google Gemini (Văn bản): Tư duy logic, lên outline cực nhanh, hiểu ngữ cảnh tiếng Việt tốt — nhưng văn phong đôi khi sáo rỗng, cần can thiệp lớn để tạo tính \"độc bản\"." },
+          { emoji: "🎨", text: "Midjourney (Hình ảnh): Chất lượng nghệ thuật xuất sắc, bắt kịp xu hướng thị giác giới trẻ, chi tiết cao — nhưng không xử lý được văn bản trong ảnh và hay lỗi chi tiết nhỏ (ngón tay, mắt)." },
+          { emoji: "🖌️", text: "Canva AI / Adobe Firefly (Thiết kế): Mở rộng vùng ảnh (Generative Expand) hoàn hảo, tối ưu tốc độ dàn trang — nhưng còn phụ thuộc nhiều vào kho template có sẵn, chưa linh hoạt với bố cục phức tạp." },
         ]
       },
       {
         title: "Bài học rút ra",
-        content: "Vai trò lý tưởng khi dùng AI sáng tạo: Bản thân là Đạo diễn → AI là Trợ lý → Bản thân là Biên tập viên cấp cao. AI không thể thay thế trải nghiệm cảm xúc và góc nhìn cá nhân, nhưng là công cụ khuếch đại năng lực sáng tạo vượt trội nếu biết sử dụng đúng cách."
+        content:
+          "AI đóng vai trò \"Trợ lý thực thi tốc độ cao\", giúp xóa bỏ nỗi sợ tờ giấy trắng và tiết kiệm đến 70% thời gian nghiên cứu ban đầu, đồng thời rút ngắn chu kỳ thử nghiệm — có thể tạo 4 phiên bản phong cách khác nhau chỉ trong 5 phút. Tuy nhiên, AI thiếu trải nghiệm nhân sinh và sự thấu cảm, nên rất cần sự nhào nặn của con người để tránh sản phẩm trở nên vô hồn, \"đồng phục công nghiệp\". Năng lực cốt lõi của người sáng tạo dịch chuyển từ \"vẽ/viết\" sang \"đặt câu hỏi\" (Prompting) và định hướng phong cách nghệ thuật. Ba vấn đề đạo đức cần lưu ý: bản quyền dữ liệu huấn luyện AI, nguy cơ lười tư duy khi lạm dụng AI viết văn bản, và tính xác thực — AI có xu hướng \"bịa việc\" (hallucination) nên số liệu cần được đối chiếu với nguồn chính thống."
       }
     ]
   },
   {
     id: 6,
     baiTap: "Bài 6",
-    title: "An toàn và liêm chính học thuật trong môi trường số",
+    title: "Nghiên cứu và ứng dụng AI có trách nhiệm trong học thuật",
     icon: "🔒",
-    tags: ["An toàn mạng", "Học thuật", "Đạo đức số"],
-    pdfLink: "https://drive.google.com/file/d/1MQEaD3fz8W4-P-HhkNgmzr8rW8pO4s9D/view?usp=drive_link",
-    goal: "Nâng cao nhận thức về an toàn thông tin, quyền riêng tư và đạo đức học thuật trong môi trường kỹ thuật số.",
-    summary: "Nghiên cứu ranh giới đạo đức trong sử dụng AI học thuật, quy trình 3 bước làm chủ công cụ AI tạo sinh và bộ 5 nguyên tắc vàng dành cho sinh viên đại học.",
+    tags: ["An toàn mạng", "Liêm chính học thuật", "Chính sách AI"],
+    pdfLink:
+      "https://drive.google.com/file/d/1g6AnMKMLK1eZ3OetHXmCfbMz3_xHqYBG/view?usp=drive_link",
+    goal: "Nâng cao nhận thức về chính sách sử dụng AI, liêm chính học thuật và đạo đức trong môi trường giáo dục số.",
+    summary:
+      'Phân tích chính sách AI của ĐHQGHN (học phần VNU1001) và đối chiếu VinUni; thực hành viết tiểu luận 500 từ về "Tác động của Thương mại điện tử đối với bán lẻ truyền thống" với sự hỗ trợ của Gemini, kèm quy trình thẩm định 3 bước (kiểm chứng thông tin – chỉnh sửa ngôn phong – tích hợp tư duy cá nhân) và trích dẫn minh bạch việc dùng AI. Xây dựng bộ 6 nguyên tắc cá nhân khi dùng AI trong học thuật.',
     sections: [
       {
-        title: "Ranh giới đạo đức học thuật",
-        content: "Phân biệt rõ ràng giữa việc sử dụng AI hỗ trợ hợp lý (khuyến khích) và gian lận học thuật (nghiêm cấm) — giúp sinh viên xây dựng nguyên tắc sử dụng công nghệ có trách nhiệm ngay từ năm đầu đại học."
+        title: "Chính sách AI tại ĐHQGHN",
+        content:
+          "Từ năm học 2025-2026, ĐHQGHN đưa học phần bắt buộc \"Nhập môn công nghệ số và ứng dụng trí tuệ nhân tạo\" (VNU1001) vào chương trình đào tạo năm nhất cho toàn bộ sinh viên chính quy. Ba nguyên tắc cốt lõi: (1) Hỗ trợ thay vì thay thế — AI chỉ là công cụ bổ trợ tư duy, không thay thế vai trò sáng tạo của người học hay vai trò dẫn dắt của giảng viên; (2) Minh bạch và trách nhiệm giải trình — mọi sản phẩm có AI tạo sinh can thiệp vượt mức kiểm tra chính tả đều phải khai báo, sinh viên chịu trách nhiệm 100% về tính chính xác và lỗi hallucination; (3) Kiểm soát nghiêm ngặt — nộp nguyên văn AI không qua xử lý, không trích dẫn sẽ bị coi là gian lận học thuật nghiêm trọng."
       },
       {
-        title: "Hỗ trợ hợp lý (Khuyến khích ✅)",
+        title: "So sánh ĐHQGHN và VinUniversity",
+        highlights: [
+          { emoji: "🎓", text: "Tính chất tiếp cận: ĐHQGHN phổ cập đại chúng, áp dụng môn học bắt buộc cho toàn bộ sinh viên năm nhất; VinUni cá nhân hóa, phân cấp sâu theo từng đề cương môn học cụ thể." },
+          { emoji: "📋", text: "Quy định trích dẫn AI: ĐHQGHN yêu cầu tuyên bố minh bạch trong phụ lục/ghi chú cuối bài; VinUni quy định rất nghiêm ngặt theo Bộ quy tắc danh dự (Honor Code)." },
+          { emoji: "🛡️", text: "Công cụ giám sát: ĐHQGHN dùng phần mềm kiểm tra đạo văn tích hợp AI Detector kết hợp hội đồng đánh giá; VinUni áp dụng kiểm tra chéo công nghệ cao cùng các buổi vấn đáp trực tiếp." },
+        ]
+      },
+      {
+        title: "Thực hành: Viết tiểu luận với sự hỗ trợ AI",
+        content:
+          "Nhiệm vụ: Lập dàn ý và viết tiểu luận 500 từ về \"Tác động của Thương mại điện tử đối với các cửa hàng bán lẻ truyền thống tại Việt Nam\". Sử dụng Google Gemini qua 2 prompt: Prompt 1 yêu cầu lập dàn ý 3 phần, tập trung cả thách thức lẫn cơ hội chuyển đổi số; Prompt 2 yêu cầu triển khai sâu phần \"Thách thức: áp lực cạnh tranh về giá và chi phí vận hành\" với lập luận phù hợp thị trường Việt Nam."
+      },
+      {
+        title: "Quy trình thẩm định 3 bước",
         steps: [
-          { step: "✓", title: "Gợi ý ý tưởng ban đầu", desc: "Dùng AI để brainstorm, phác thảo cấu trúc bài viết, không để AI làm thay toàn bộ nội dung." },
-          { step: "✓", title: "Giải thích khái niệm khó", desc: "Sử dụng AI để hiểu sâu hơn các khái niệm phức tạp hoặc dịch tài liệu tham khảo nước ngoài." },
-          { step: "✓", title: "Sửa lỗi và tối ưu định dạng", desc: "Kiểm tra lỗi chính tả, ngữ pháp, tối ưu hóa định dạng bài viết bằng AI." },
-          { step: "✓", title: "Kích thích tư duy độc lập", desc: "Học sinh làm chủ quá trình tư duy, AI chỉ đóng vai trò trợ lý nâng cao hiệu suất." },
+          { step: "01", title: "Kiểm chứng thông tin (Fact-checking)", desc: "Đối chiếu số liệu AI đưa ra (giá rẻ hơn 20–30%) với Báo cáo Chỉ số Thương mại điện tử Việt Nam 2025 của VECOM để bổ sung dữ liệu thực tế." },
+          { step: "02", title: "Chỉnh sửa ngôn phong", desc: "Thay cụm từ thông thường bằng thuật ngữ học thuật chính xác, ví dụ \"nhìn và thử ở cửa hàng nhưng đặt mua trên mạng\" → \"Hiệu ứng Showrooming\"." },
+          { step: "03", title: "Tích hợp tư duy cá nhân", desc: "Bổ sung góc nhìn riêng: áp lực cạnh tranh chính là \"sự hủy diệt mang tính sáng tạo\" (Creative Destruction – Joseph Schumpeter), buộc doanh nghiệp bán lẻ phải tự tiến hóa." },
         ]
       },
       {
-        title: "Gian lận học thuật (Nghiêm cấm ❌)",
+        title: "Ranh giới: Hỗ trợ hợp lý và Gian lận học thuật",
         highlights: [
-          { emoji: "❌", text: "Ra lệnh cho AI làm hộ toàn bộ hoặc chương cốt lõi của bài tập lớn" },
-          { emoji: "❌", text: "Copy-paste nguyên văn văn bản do AI tạo ra và ký tên cá nhân" },
-          { emoji: "❌", text: "Ngụy tạo số liệu, bịa đặt nguồn tài liệu tham khảo bằng AI" },
-          { emoji: "❌", text: "Dùng AI paraphrase để lách luật chống đạo văn" },
+          { emoji: "✅", text: "Hỗ trợ hợp lý: Dùng AI như trợ lý nghiên cứu — sửa lỗi ngữ pháp, gợi ý cấu trúc, brainstorm ý tưởng, giải thích khái niệm khó; người học vẫn tự đọc hiểu, phân tích và tái cấu trúc bằng tư duy của mình." },
+          { emoji: "❌", text: "Gian lận học thuật (AI-plagiarism): Copy-paste nguyên văn hoặc chỉ xào xáo nhẹ bài viết do AI sinh ra rồi ký tên mình làm tác giả chính." },
+          { emoji: "©️", text: "Vấn đề sở hữu trí tuệ: LLM được huấn luyện trên dữ liệu có bản quyền mà không xin phép tác giả gốc; trích dẫn \"Nguồn: AI\" không có giá trị khoa học — cần truy về nguồn sơ cấp để trích dẫn trực tiếp." },
         ]
       },
       {
-        title: "5 Nguyên tắc vàng cho sinh viên",
+        title: "Bộ 6 nguyên tắc cá nhân",
         highlights: [
-          { emoji: "①", text: "Minh bạch công khai: Luôn công bố rõ loại AI đã dùng và mức độ đóng góp của AI trong bài" },
-          { emoji: "②", text: "Kiểm chứng tuyệt đối: Luôn đối chiếu số liệu và luận điểm AI cung cấp với tài liệu gốc tin cậy" },
-          { emoji: "③", text: "Chịu trách nhiệm 100%: Không đổ lỗi cho hệ thống AI về tính chính xác của dữ liệu" },
-          { emoji: "④", text: "Tôn trọng sở hữu trí tuệ: Hướng tới sự nguyên bản, không lách luật bằng công nghệ" },
-          { emoji: "⑤", text: "Học tập bền vững: Chỉ dùng AI khi nó thúc đẩy hiểu biết sâu hơn, không nuôi dưỡng sự lười biếng tư duy" },
+          { emoji: "①", text: "Con người làm chủ (Human-in-command): Bản thân luôn là tác giả, chịu trách nhiệm cuối cùng; AI chỉ là trợ lý, không thay thế tư duy độc lập." },
+          { emoji: "②", text: "Minh bạch tuyệt đối (Radical Transparency): Khai báo thành thật phạm vi, mục đích và công cụ AI đã dùng, không tìm cách lách bộ lọc AI Detector." },
+          { emoji: "③", text: "Hoài nghi lành mạnh & Kiểm chứng kép (Double-Check & Fact-Checking): Không tin tưởng mù quáng vào thông tin AI cung cấp; mọi dữ liệu phải kiểm chứng qua nguồn chính thống." },
+          { emoji: "④", text: "Không sao chép nguyên bản (Zero Copy-Paste): Luôn diễn đạt lại bằng ngôn ngữ riêng, lồng ghép góc nhìn cá nhân để đảm bảo tính độc bản của bài làm." },
+          { emoji: "⑤", text: "Bảo mật dữ liệu học thuật (Data Privacy): Không tải lên AI công cộng tài liệu nội bộ, bài kiểm tra chưa công bố hay thông tin cá nhân của giảng viên/bạn học." },
+          { emoji: "⑥", text: "Học song song cùng AI (Skill Amplification): Ưu tiên yêu cầu AI hướng dẫn phương pháp tư duy thay vì cho đáp án, nhằm nâng cao năng lực tự học dài hạn." },
         ]
-      }
-    ]
+      },
+    ],
   }
 ];
